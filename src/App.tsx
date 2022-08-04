@@ -11,8 +11,8 @@ function App() {
   const usdcLocal = new Contract("0x1234567890123456789012345678901234567890", erc20)
 
   const { chainId, account, activateBrowserWallet, deactivate } = useEthers()
-  //const binanceResult = useCall({ contract: usdcBinance, method: "totalSupply", args: [] }, { chainId: ChainId.BSC })
-  //const fantomResult = useCall({ contract: usdcFantom, method: "totalSupply", args: [] }, { chainId: ChainId.Fantom })
+  const binanceResult = useCall({ contract: usdcBinance, method: "totalSupply", args: [] }, { chainId: ChainId.BSC })
+  const fantomResult = useCall({ contract: usdcFantom, method: "totalSupply", args: [] }, { chainId: ChainId.Fantom })
   const localResult = useCall({ contract: usdcLocal, method: "totalSupply", args: [] }, { chainId: 2 })
 
   //const binanceSupply = binanceResult?.value?.[0]
